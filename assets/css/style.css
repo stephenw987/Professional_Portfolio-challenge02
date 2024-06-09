@@ -1,0 +1,157 @@
+/* UNIVERSAL CSS */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgba(24, 32, 181, 0.8);
+    --secondary: rgba(26, 133, 205, 0.8);
+    --tertiary: rgba(190, 186, 186, 0.8);
+    --dark: rgba(60, 60, 60, 0.8);
+    --light: rgba(255, 235, 189, 0.8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+}
+
+header {
+    padding: 20px 0 20px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* EXPERIMENTATION */
+    flex-wrap:wrap;
+    align-items: center;
+    background-color: var(--tertiary); 
+}
+
+header h1 {
+    color: var(--secondary);
+    background-color: var(--dark);
+    padding: 5px 3% 5px 3%;
+    margin: 0;
+    font-size: 3vw;
+    line-height: 2.5;
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 5px;
+    color: var(--secondary);
+    margin-right: 20px;
+    background-image: linear-gradient(0deg, var(--secondary) 0%, var(--secondary) 100%);
+    background-repeat:no-repeat;
+    background-size: 100% 0.3em;
+    backgorund-position: top;
+    transition: all 0.25s ease-in;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--primary)
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+#banner {
+    background-image: url("../images/sand.jpg"
+    /* , var(--secondary) 0%, var(--primary) 100% */
+    );
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    min-height: 25vh;
+    /* color: var(--light); */
+    padding: 2%, 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+#banner div {
+    flex: 0 0 90%;
+}
+
+#banner h2 {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 2rem;
+    line-height: 1.2;
+    display: inline;
+}
+
+main {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about p, 
+#about #starfish {
+    display: block;
+    /* flex-wrap: wrap; */
+}
+
+#about p {
+    max-width: 75%;
+    align-self: left;
+}
+
+#about #starfish {
+    max-width: 20%;
+    /* background-image: url("../images/starfish.jpg"); */
+    float: right;
+    /* background-size:auto; */
+    /* align-content: right; */
+    /* border: 1px;
+    border-color:black; */
+    box-shadow: 10px 5px 5px rgb(214, 69, 20);
+    /* align-self: right; */
+    /* justify-content: center; */
+    /* display: inline; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
