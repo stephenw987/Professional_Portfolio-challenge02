@@ -1,34 +1,4 @@
-/* UNIVERSAL CSS */
-* {
-    box-sizing: border-box;
-}
 
-:root {
-    --primary: rgba(24, 32, 181, 0.8);
-    --secondary: rgba(26, 133, 205, 0.8);
-    --tertiary: rgba(190, 186, 186, 0.8);
-    --dark: rgba(60, 60, 60, 0.8);
-    --light: rgba(255, 235, 189, 0.8);
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--primary);
-    background-color: var(--light);
-    line-height: 1.5;
-}
-
-h1,
-h2, 
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-
-}
 
 header {
     padding: 20px 0 20px 5%;
@@ -64,7 +34,7 @@ nav a {
     background-image: linear-gradient(0deg, var(--secondary) 0%, var(--secondary) 100%);
     background-repeat:no-repeat;
     background-size: 100% 0.3em;
-    backgorund-position: top;
+    background-position: top;
     transition: all 0.25s ease-in;
     font-size: 1.2rem;
 }
@@ -118,20 +88,24 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
-#about p, 
-#about #starfish {
+#about h2 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#section_about {
     display: block;
-    /* flex-wrap: wrap; */
+    /* flex-flow: row;
+    flex-wrap: wrap; */
+    /* align-content: top; */
 }
 
 #about p {
     max-width: 75%;
-    align-self: left;
+    /* align-self: left; */
 }
 
 #about #starfish {
-    max-width: 20%;
+    max-width: 23%;
     /* background-image: url("../images/starfish.jpg"); */
     float: right;
     /* background-size:auto; */
@@ -139,10 +113,10 @@ main {
     /* border: 1px;
     border-color:black; */
     box-shadow: 10px 5px 5px rgb(214, 69, 20);
-    /* align-self: right; */
+    align-self: top;
     /* justify-content: center; */
     /* display: inline; */
-
+    /* vertical-align: auto; */
 }
 
 
@@ -155,3 +129,185 @@ main {
 
 
 
+#work {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--primary);
+    font-size: 4vw;
+    line-height: 1.1;
+  }
+  
+  .page-section > div {
+    flex: 0 0 77%;
+  }
+  
+  .page-section p {
+    margin-bottom: 20px;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flex-item {
+    border: 5px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+  }
+  
+  /* feature first portfolio item */
+  .flex-item:first-child {
+      min-height: 400px;
+      flex-basis: 100%;
+  }
+  
+  .flex-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .flex-item div {
+    background-color: var(--secondary);
+    padding: 8px 10px;
+  }
+  
+  .flex-item h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  
+
+
+
+
+
+
+
+  .contact address a {
+    color: var(--secondary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-style: normal;
+    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    margin: 0 0.2rem 0.1rem;
+    display: inline-block;
+  }
+  
+  .contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--primary);
+  }
+  
+  /* portfolio project images */
+  .run-buddy {
+    background-image: url("../images/02-run-buddy.jpg");
+  }
+  
+  .led-wall {
+    background-image: url("../images/02-portfolio-1.jpg");
+  }
+  
+  .react-calc {
+    background-image: url("../images/02-portfolio-2.jpg");
+  }
+  
+  .pastel-puzzles {
+    background-image: url("../images/02-portfolio-3.jpg");
+  }
+  
+  .surf-report {
+    background-image: url("../images/02-portfolio-4.jpg");
+  }
+  
+  /* end portfolio project images */
+  
+  @media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .page-section > h2,
+    .page-section > div {
+      flex: 0 0 100%;
+    }
+  
+    .page-section > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .hero-banner {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
