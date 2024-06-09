@@ -4,11 +4,11 @@
 }
 
 :root {
-    --primary: rgba(24, 32, 181, 0.8);
-    --secondary: rgba(26, 133, 205, 0.8);
-    --tertiary: rgba(159, 159, 159, 0.8);
-    --dark: rgba(60, 60, 60, 0.8);
-    --light: rgba(255, 235, 189, 0.8);
+    --primary: rgba(24, 32, 181, 1);
+    --secondary: rgba(26, 133, 205, 1);
+    --tertiary: rgb(227, 227, 227);
+    --dark: rgba(60, 60, 60, 1);
+    --light: rgba(255, 235, 189, 1);
 }
 
 body {
@@ -30,5 +30,11 @@ h6 {
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 4vw;
 }
+
+main h2 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
