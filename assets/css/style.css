@@ -266,7 +266,7 @@ main {
   
   .Landing-Page {
     background-image: url("../images/Landing_Page_screenshot.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
